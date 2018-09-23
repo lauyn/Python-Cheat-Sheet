@@ -1,0 +1,23 @@
+"""
+Create a new column in a pandas data frame based on the values in an existing column
+- multiple conditions
+
+@author: lauyn
+@date: Sun 23 September 2018
+"""
+
+mydata['new_column'] = '' # create the new column 
+
+for i in range(len(mydata)):
+    
+    if data.at[i, 'existing_column'] == SOMEVALUE:
+        data.at[i, 'new_column'] = SOMEOTHERVALUE
+        
+    elif data.at[i, 'existing_column'] < VALUE and data.at[i, 'existing_column'] >= INSERTVALUE1:
+        data.at[i, 'new_column'] = aVALUE1
+    
+    elif data.at[i, 'existing_column'] < VALUE2 and data.at[i, 'existing_column'] >= INSERTVALUE2:
+        data.at[i, 'new_column'] = aVALUE2
+    
+    else:
+        data.at[i, 'new_column'] = OTHERVALUE
